@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://gistcdn.githack.com/2kai2kai2/0f473c5cc3d4872db3d6bdfbace5a90a/raw/7a528e902429d7855a45769d5dc1a294a512032c/IDV_data_01.js?min=1"></script>
+  <script src="genre-viz-script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+    <div id="filters-container">
+      <div id="genre-filters">
+        <label2>Genres</label2>
+        <button onclick="toggleGenreCheckboxes()">Toggle All</button>
+        <div class="label-list">
+          <label><input type="checkbox" class="label-checkbox" value="Action" checked>Action</label>
+          <label><input type="checkbox" class="label-checkbox" value="Animation">Animation</label>
+          <label><input type="checkbox" class="label-checkbox" value="Adventure">Adventure</label>
+          <label><input type="checkbox" class="label-checkbox" value="Comedy">Comedy</label>
+          <label><input type="checkbox" class="label-checkbox" value="Crime" checked>Crime</label>
+          <label><input type="checkbox" class="label-checkbox" value="Documentary">Documentary</label>
+          <label><input type="checkbox" class="label-checkbox" value="Drama" checked>Drama</label>
+          <label><input type="checkbox" class="label-checkbox" value="Fantasy">Fantasy</label>
+          <label><input type="checkbox" class="label-checkbox" value="History">History</label>
+          <label><input type="checkbox" class="label-checkbox" value="Horror">Horror</label>
+          <label><input type="checkbox" class="label-checkbox" value="Musical">Musical</label>
+          <label><input type="checkbox" class="label-checkbox" value="Mystery">Mystery</label>
+          <label><input type="checkbox" class="label-checkbox" value="Reality">Reality</label>
+          <label><input type="checkbox" class="label-checkbox" value="Romance" checked>Romance</label>
+          <label><input type="checkbox" class="label-checkbox" value="Sci-Fi" checked>Sci-Fi</label>
+          <label><input type="checkbox" class="label-checkbox" value="Thriller">Thriller</label>
+          <label><input type="checkbox" class="label-checkbox" value="War">War</label>
+          <label><input type="checkbox" class="label-checkbox" value="Western">Western</label>
+        </div>
+      </div>
+
+      <div id="platform-filters">
+        <label2>Platforms</label2>
+        <button onclick="togglePlatformCheckboxes()">Toggle All</button>
+        <div class="label-list">
+          <label><input type="checkbox" class="dataset-checkbox" value="Amazon Prime">Amazon Prime</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="Apple TV" checked>Apple TV</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="Crunchyroll">Crunchyroll</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="Disney+">Disney+</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="HBO Max">HBO Max</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="Hulu" checked>Hulu</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="Netflix">Netflix</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="Paramount+" checked>Paramount+</label>
+          <label><input type="checkbox" class="dataset-checkbox" value="Peacock">Peacock</label>
+        </div>
+      </div>
+      <div id="rating-filter">
+        <label2 id="star-selection">Minimum Rating (Stars): 3</label2>
+        <div class="slider-container">
+          <input id="rating-slider" type="range" min="1" max="8" list="stars">
+          <datalist id="stars">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+          </datalist>
+        </div>
+      </div>
+    </div>
+
+    <div id="status-container">
+      <label3>*</label3>
+      <label3 id="status-platform"></label3>
+      <label2 id="status"></label2>
+    </div>
+  </div>
+</body>
+
+</html>
